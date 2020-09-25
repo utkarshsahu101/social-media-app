@@ -1,0 +1,100 @@
+[debug] [2020-09-25T01:49:51.508Z] ----------------------------------------------------------------------
+[debug] [2020-09-25T01:49:51.511Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\utkar\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-09-25T01:49:51.512Z] CLI Version:   8.11.0
+[debug] [2020-09-25T01:49:51.512Z] Platform:      win32
+[debug] [2020-09-25T01:49:51.512Z] Node Version:  v13.12.0
+[debug] [2020-09-25T01:49:51.513Z] Time:          Fri Sep 25 2020 07:19:51 GMT+0530 (India Standard Time)
+[debug] [2020-09-25T01:49:51.514Z] ----------------------------------------------------------------------
+[debug] [2020-09-25T01:49:51.514Z] 
+[debug] [2020-09-25T01:49:51.613Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-09-25T01:49:51.614Z] > authorizing via signed-in user
+[debug] [2020-09-25T01:49:51.614Z] [iam] checking project socialape-14722 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-09-25T01:49:51.618Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-09-25T01:49:51.619Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-09-25T01:49:52.001Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 25 Sep 2020 01:49:54 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-25T01:49:52.051Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/socialape-14722:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2020-09-25T01:49:53.809Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 25 Sep 2020 01:49:55 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1382","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-25T01:49:53.811Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/socialape-14722/serviceAccounts/socialape-14722@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2020-09-25T01:49:55.753Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 25 Sep 2020 01:49:57 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'socialape-14722'...
+[info] 
+[info] i  deploying functions 
+[debug] [2020-09-25T01:50:29.068Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "busboy": "^0.3.1",
+    "express": "^4.17.1",
+    "firebase": "^7.21.0",
+    "firebase-admin": "^8.10.0",
+    "firebase-functions": "^3.6.1"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[warn] 
+[warn] !  functions: The Node.js 8 runtime is deprecated and will be decommissioned on 2021-03-15. For more information, see: https://firebase.google.com/support/faq#functions-runtime 
+[warn] 
+[debug] [2020-09-25T01:50:31.227Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/socialape-14722/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2020-09-25T01:50:31.228Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/socialape-14722/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2020-09-25T01:50:33.663Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 25 Sep 2020 01:50:35 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2020-09-25T01:50:33.707Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 25 Sep 2020 01:50:35 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-25T01:50:33.708Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/socialape-14722/adminSdkConfig  
+ 
+[debug] [2020-09-25T01:50:34.402Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 25 Sep 2020 01:50:36 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: preparing functions directory for uploading... 
+[debug] [2020-09-25T01:50:34.406Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/socialape-14722/configs  
+ 
+[debug] [2020-09-25T01:50:36.463Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 25 Sep 2020 01:50:38 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: packaged functions (36.63 KB) for uploading 
+[debug] [2020-09-25T01:50:37.728Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/socialape-14722/locations/-/functions  
+ 
+[debug] [2020-09-25T01:50:40.521Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 25 Sep 2020 01:50:42 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-25T01:50:40.525Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2020-09-25T01:50:40.526Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/socialape-14722:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2020-09-25T01:50:42.181Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 25 Sep 2020 01:50:44 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1421","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-25T01:50:42.181Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2020-09-25T01:50:42.182Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/socialape-14722/locations/us-central1/functions:generateUploadUrl  
+ 
+[debug] [2020-09-25T01:50:43.239Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 25 Sep 2020 01:50:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-25T01:50:43.240Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-d69a1f9e-77fe-4317-812c-7fb4a0ee1b60/b1ae1192-f77a-4fe7-a4dc-2999eb7d0e3b.zip?GoogleAccessId=service-252489984490@gcf-admin-robot.iam.gserviceaccount.com&Expires=1601000445&Signature=gqlw4c3r00q2TfcDDyR5UIf1hUbNyXMqKhGi%2BFQxumMeQYZpjRhCjF47FosS9m481lfhDDHmVnCoo3eAPabywKKGVGW%2BFERsdBmGium8s9qserF7s4Q4Ym1I40m2lvmFAvAU5KQ5UlRT1qpqvWmMOcv6yXT%2B0MFI6XZVX%2ByW8sKdE0IWY2Nb%2BvGZeIckoXVf3OzDuynBc58hlWDhieUQonn9YfXp2Zw9ilBWnCyrSu4S0j7uqbt1cYkDWEAqsXfxNxTLBNs8xEGUgrufi9k0Hj%2B7zC5LUcU%2F%2FsMkW3w7XkR5G9nFwrnzp9eGzE3HC3UEpBcYI9cK3aOZZPRt2aIkIQ%3D%3D  
+ <request body omitted>
+[debug] [2020-09-25T01:50:43.992Z] <<< HTTP RESPONSE 200 {"x-guploader-uploadid":"ABg5-UwWEyVeGawgPgT6dlCPAHjo7LzO-f51mkHalQxxWMxmYABMjVLH5QQI5wC1B_UWFv5NDcWg7UXA3kRCB6ACtNE","etag":"\"9bd3b857ec0ac8585750cb33a117afc6\"","x-goog-generation":"1600998645991512","x-goog-metageneration":"1","x-goog-hash":"crc32c=4u7qIw==, md5=m9O4V+wKyFhXUMszoRevxg==","x-goog-stored-content-length":"37509","x-goog-stored-content-encoding":"identity","vary":"Origin","content-length":"0","date":"Fri, 25 Sep 2020 01:50:46 GMT","server":"UploadServer","content-type":"text/html; charset=UTF-8","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""}
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 8 (Deprecated) function api(asia-south1)... 
+[debug] [2020-09-25T01:50:43.997Z] Trigger is:  {"httpsTrigger":{}}
+[info] i  functions: creating Node.js 8 (Deprecated) function createNotificationLike(asia-south1)... 
+[debug] [2020-09-25T01:50:43.997Z] Trigger is:  {"eventTrigger":{"resource":"projects/socialape-14722/databases/(default)/documents/likes/{id}","eventType":"providers/cloud.firestore/eventTypes/document.create","service":"firestore.googleapis.com"}}
+[info] i  functions: creating Node.js 8 (Deprecated) function deleteNotificationOnUnLike(asia-south1)... 
+[debug] [2020-09-25T01:50:43.998Z] Trigger is:  {"eventTrigger":{"resource":"projects/socialape-14722/databases/(default)/documents/comments/{id}","eventType":"providers/cloud.firestore/eventTypes/document.delete","service":"firestore.googleapis.com"}}
+[info] i  functions: creating Node.js 8 (Deprecated) function createNotificationOnComment(asia-south1)... 
+[debug] [2020-09-25T01:50:43.998Z] Trigger is:  {"eventTrigger":{"resource":"projects/socialape-14722/databases/(default)/documents/comments/{id}","eventType":"providers/cloud.firestore/eventTypes/document.create","service":"firestore.googleapis.com"}}
+[info] 
+The following functions are found in your project but do not exist in your local source code:
+	api(us-central1)
+	createScream(us-central1)
+
+If you are renaming a function or changing its region, it is recommended that you create the new function first before deleting the old one to prevent event loss. For more info, visit https://firebase.google.com/docs/functions/manage-functions#modify
+
