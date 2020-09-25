@@ -55,7 +55,7 @@ exports.signup = (req, res) => {
       return db.doc(`/users/${newUser.handle}`).set(userCredentials);
     })
     .then(() => {
-      res.status(201).json({ token });
+      return res.status(201).json({ token });
     })
     .catch((err) => {
       console.error(err);
@@ -181,7 +181,7 @@ exports.getAuthenticatedUser = (req, res) => {
       data.forEach((doc) => {
         userData.notifications.push({
           recipient: doc.data().recipient,
-          sender: doc.data().recipient,
+          sender: doc.data().sender,
           createdAt: doc.data().createdAt,
           screamId: doc.data().screamId,
           type: doc.data().type,

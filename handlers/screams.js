@@ -20,7 +20,11 @@ exports.getAllScreams = (req, res) => {
       });
       return res.json(screams);
     })
-    .catch((err) => console.error(err));
+    // .catch((err) => console.error(err));
+    .catch((err) => {
+      console.error(err);
+      res.status(500).json({ error: err.code });
+    });
 };
 
 // post one scream
@@ -92,6 +96,7 @@ exports.commentOnScream = (req, res) => {
     userHandle: req.user.handle,
     userImage: req.user.imageUrl,
   };
+  console.log(newComment);
 
   db.doc(`/screams/${req.params.screamId}`)
     .get()
@@ -189,7 +194,7 @@ exports.unlikeScream = (req, res) => {
         return res.status(400).json({ error: "Scream not liked" });
       } else {
         return db
-          .doc(`likes/${data.docs[0].id}`)
+          .doc(`/likes/${data.docs[0].id}`)
           .delete()
           .then(() => {
             screamData.likeCount--;
